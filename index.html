@@ -1,11 +1,439 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-  h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Montserrat", sans-serif;
-    height: 100vh;
-  }
-</style>
-<h1>This Agency Website Loading...</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strive Agency — European Placement Specialists</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!--
+    Fonts:
+    - "Cormorant Garamond" → elegant serif for hero headlines
+    - "DM Sans"            → clean sans-serif for body & UI
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER — logo left, nav right, hamburger on mobile
+       ============================================================ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+
+      <!-- Logo (swap src for a different logo path if needed) -->
+      <a href="#top" class="logo-link" aria-label="Strive Agency home">
+        <img src="logo.png" alt="Strive Agency" class="logo-img" />
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="nav-desktop" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile hamburger button -->
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Toggle mobile menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile slide-down menu -->
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation" hidden>
+      <ul>
+        <li><a href="#about"    class="mobile-link">About</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#process"  class="mobile-link">Process</a></li>
+        <li><a href="#contact"  class="mobile-link">Get in Touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       HERO — full-viewport opening statement
+       ============================================================ -->
+  <section class="hero" aria-label="Hero banner">
+    <div class="container hero-inner">
+      <p class="hero-eyebrow">Nepal &#8594; Europe</p>
+      <h1 class="hero-headline">
+        Connecting Talented&nbsp;Professionals<br />
+        <em>with European Opportunity</em>
+      </h1>
+      <!-- PLACEHOLDER — replace with your actual value proposition -->
+      <p class="hero-sub">
+        Strive Agency bridges the gap between skilled Nepali workers and reputable
+        European employers — through verified, DOFE-compliant pathways that protect
+        candidates and deliver results for clients.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact"  class="btn btn-primary">Start Your Journey</a>
+        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+    </div>
+    <!-- Decorative diagonal accent -->
+    <div class="hero-bar" aria-hidden="true"></div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT — brief agency introduction
+       ============================================================ -->
+  <section class="about section-pad" id="about" aria-labelledby="about-heading">
+    <div class="container about-grid">
+
+      <div class="about-text">
+        <span class="section-label">Who We Are</span>
+        <h2 id="about-heading">A Trusted Bridge Between Talent and Opportunity</h2>
+        <!-- PLACEHOLDER — replace with actual agency story -->
+        <p>
+          Founded in Pokhara, Strive Agency was built on a simple belief: skilled
+          Nepali professionals deserve transparent, ethical pathways to global careers.
+          We partner with licensed European recruitment agencies to source, screen, and
+          place candidates in roles that match their qualifications and ambitions.
+        </p>
+        <!-- PLACEHOLDER — replace with actual mission text -->
+        <p>
+          Every placement we facilitate follows government-approved (DOFE) channels,
+          ensuring full legal compliance and genuine career development for the people
+          we serve.
+        </p>
+      </div>
+
+      <!-- Stat cards — update figures as your business grows -->
+      <div class="about-stats" aria-label="Agency statistics">
+        <div class="stat-card">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">European Partners</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">8</span>
+          <span class="stat-label">Countries Covered</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">DOFE Compliant</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Years of Experience</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES — what Strive Agency offers
+       ============================================================ -->
+  <section class="services section-pad" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <span class="section-label center">What We Offer</span>
+      <h2 id="services-heading" class="section-title center">Our Services</h2>
+
+      <div class="services-grid">
+
+        <!-- Service card 1 -->
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">01</div>
+          <h3>Candidate Sourcing &amp; Screening</h3>
+          <!-- PLACEHOLDER -->
+          <p>
+            We identify, evaluate, and prepare qualified Nepali candidates for
+            roles across Europe — from skilled trades to professional sectors.
+          </p>
+        </article>
+
+        <!-- Service card 2 -->
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">02</div>
+          <h3>Employer Partnerships</h3>
+          <!-- PLACEHOLDER -->
+          <p>
+            We work directly with licensed European recruitment agencies and employers
+            seeking reliable, motivated talent through B2B sourcing agreements.
+          </p>
+        </article>
+
+        <!-- Service card 3 -->
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">03</div>
+          <h3>Visa &amp; Documentation Support</h3>
+          <!-- PLACEHOLDER -->
+          <p>
+            Our team guides candidates through work-permit applications, language
+            preparation, and pre-departure requirements step by step.
+          </p>
+        </article>
+
+        <!-- Service card 4 -->
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">04</div>
+          <h3>Sector Specialisations</h3>
+          <!-- PLACEHOLDER -->
+          <p>
+            We currently specialise in hospitality, construction, logistics
+            (incl. Berufskraftfahrer), healthcare support, and light manufacturing.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROCESS — how it works, 4-step timeline
+       ============================================================ -->
+  <section class="process section-pad" id="process" aria-labelledby="process-heading">
+    <div class="container">
+      <span class="section-label center">How It Works</span>
+      <h2 id="process-heading" class="section-title center">Our Process</h2>
+
+      <ol class="process-steps" aria-label="Four-step placement process">
+
+        <li class="process-step">
+          <span class="step-number" aria-hidden="true">1</span>
+          <div class="step-body">
+            <h3>Initial Consultation</h3>
+            <!-- PLACEHOLDER -->
+            <p>
+              We meet with candidates or employer partners to understand goals,
+              requirements, and timelines in full detail.
+            </p>
+          </div>
+        </li>
+
+        <li class="process-step">
+          <span class="step-number" aria-hidden="true">2</span>
+          <div class="step-body">
+            <h3>Profile &amp; Role Matching</h3>
+            <!-- PLACEHOLDER -->
+            <p>
+              Using our European partner network, we match verified candidates to
+              open positions that align with their skills and aspirations.
+            </p>
+          </div>
+        </li>
+
+        <li class="process-step">
+          <span class="step-number" aria-hidden="true">3</span>
+          <div class="step-body">
+            <h3>Documentation &amp; Compliance</h3>
+            <!-- PLACEHOLDER -->
+            <p>
+              We handle all DOFE-compliant paperwork, labour agreements, and
+              visa documentation to ensure a smooth, legal process.
+            </p>
+          </div>
+        </li>
+
+        <li class="process-step">
+          <span class="step-number" aria-hidden="true">4</span>
+          <div class="step-body">
+            <h3>Placement &amp; Follow-Up</h3>
+            <!-- PLACEHOLDER -->
+            <p>
+              After a successful placement, we maintain contact with both parties
+              to support long-term satisfaction and continued partnership.
+            </p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT — enquiry form for candidates and employers
+       ============================================================ -->
+  <section class="contact section-pad" id="contact" aria-labelledby="contact-heading">
+    <div class="container contact-grid">
+
+      <!-- Left: contact info -->
+      <div class="contact-info">
+        <span class="section-label">Reach Out</span>
+        <h2 id="contact-heading">Let's Start a Conversation</h2>
+        <!-- PLACEHOLDER -->
+        <p>
+          Whether you are a candidate exploring European career options or an employer
+          seeking reliable sourcing support, we would love to hear from you.
+        </p>
+        <address>
+          <p><strong>Location:</strong> Pokhara, Gandaki Pradesh, Nepal</p>
+          <!-- PLACEHOLDER — replace with actual email -->
+          <p><strong>Email:</strong> <a href="mailto:hello@striveagency.com">hello@striveagency.com</a></p>
+          <!-- PLACEHOLDER — replace with actual phone -->
+          <p><strong>Phone:</strong> <a href="tel:+977XXXXXXXXXX">+977 — — — — — — —</a></p>
+        </address>
+      </div>
+
+      <!-- Right: contact form -->
+      <div class="contact-form-wrap">
+        <form
+          id="contactForm"
+          class="contact-form"
+          novalidate
+          aria-label="Contact enquiry form"
+        >
+
+          <!-- Name -->
+          <div class="field-group">
+            <label for="name">
+              Full Name <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="e.g. Rajan Shrestha"
+              autocomplete="name"
+              required
+              aria-required="true"
+            />
+            <span class="field-error" id="nameError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Email -->
+          <div class="field-group">
+            <label for="email">
+              Email Address <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="e.g. rajan@example.com"
+              autocomplete="email"
+              required
+              aria-required="true"
+            />
+            <span class="field-error" id="emailError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Enquiry type -->
+          <div class="field-group">
+            <label for="enquiryType">
+              I am a <span class="required" aria-hidden="true">*</span>
+            </label>
+            <select id="enquiryType" name="enquiry_type" required aria-required="true">
+              <option value="">&#8212; Please select &#8212;</option>
+              <option value="candidate">Candidate seeking placement</option>
+              <option value="employer">Employer / Agency partner</option>
+              <option value="other">Other enquiry</option>
+            </select>
+            <span class="field-error" id="enquiryError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Message -->
+          <div class="field-group">
+            <label for="message">
+              Message <span class="required" aria-hidden="true">*</span>
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tell us about your goals or requirements&#8230;"
+              required
+              aria-required="true"
+            ></textarea>
+            <span class="field-error" id="messageError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-full">Send Enquiry</button>
+
+          <!-- Success / error feedback shown after submission -->
+          <div
+            id="formFeedback"
+            class="form-feedback"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container footer-inner">
+
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <img src="logo.png" alt="Strive Agency" class="footer-logo" />
+        <!-- PLACEHOLDER -->
+        <p class="footer-tagline">Ethical recruitment. Real opportunity. Global reach.</p>
+      </div>
+
+      <!-- Quick links -->
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Social icons — replace href="#" with actual profile URLs -->
+      <div class="footer-social">
+
+        <a href="#" aria-label="Strive Agency on LinkedIn" rel="noopener noreferrer" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5H4.5V24H.5V8.5zM8.5 8.5h3.8v2.14h.05C12.88 9.04 14.57 8 16.5 8c4.2 0 4.98 2.76 4.98 6.34V24h-4V15.2c0-2.1-.04-4.8-2.92-4.8-2.92 0-3.37 2.28-3.37 4.64V24h-4V8.5z"/>
+          </svg>
+        </a>
+
+        <a href="#" aria-label="Strive Agency on Facebook" rel="noopener noreferrer" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.324V1.324C24 .593 23.407 0 22.676 0"/>
+          </svg>
+        </a>
+
+        <a href="#" aria-label="Strive Agency on Instagram" rel="noopener noreferrer" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.975 1.247 2.242 1.31 3.608.058 1.265.069 1.645.069 4.849s-.011 3.584-.069 4.849c-.063 1.366-.335 2.633-1.31 3.608-.975.975-2.242 1.247-3.608 1.31-1.266.058-1.646.069-4.85.069s-3.584-.011-4.849-.069c-1.366-.063-2.633-.335-3.608-1.31-.975-.975-1.247-2.242-1.31-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.849c.062-1.366.334-2.633 1.31-3.608.975-.975 2.242-1.247 3.608-1.31C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.333.014 7.053.072 5.775.131 4.602.425 3.635 1.393 2.667 2.361 2.374 3.534 2.314 4.813 2.256 6.093 2.243 6.5 2.243 12c0 5.5.013 5.907.071 7.187.06 1.279.353 2.452 1.32 3.42.968.967 2.141 1.26 3.42 1.32C8.333 23.987 8.741 24 12 24c3.259 0 3.667-.013 4.947-.071 1.279-.06 2.452-.353 3.42-1.32.967-.968 1.26-2.141 1.32-3.42.058-1.28.071-1.688.071-7.187 0-5.5-.013-5.907-.071-7.187-.06-1.279-.353-2.452-1.32-3.42-.968-.968-2.141-1.26-3.42-1.32C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Copyright bar -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Strive Agency. All rights reserved.</p>
+        <p>Registered in Nepal &mdash; DOFE licensing in progress.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
